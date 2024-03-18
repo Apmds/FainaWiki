@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentação - Faina Wiki</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+</head>
+<body>
+    <nav id="top-navbar" class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" tabindex="NBA"><img src="./logo.png" height="24" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="page_editor.html"><i class="fa fa-pencil" aria-hidden="true"></i> Editor de página</a></li>
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="editor_docs.html"><i class="fa fa-book" aria-hidden="true"></i> Documentação</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container pt-5">
+        <h1>Documentação</h1>
+        <h3>Índice:</h3>
+        <ol>
+            <li><a href="#intro">Introdução</a></li>
+            <li><a href="#structure">Estrutura do documento</a></li>
+            <li><a href="#element">Elementos</a></li>
+            <li><a href="#addpage">Adicionar a página à lista</a></li>
+        </ol>
+
+        <h3 id="intro">1. Introdução:</h3>
+        <p>Se estás aqui, é por uma de duas razões:</p>
+        <ul>
+            <li>Viste a opção da documentação na navbar em cima e apeteceu-te ver o que era.</li>
+            <li>Queres contribuir para o projeto e fazer uma página ou editar alguma página já existente.</li>
+        </ul>
+        <p>Esta "documentação" destina-se aos no-life que cá se encontram pela segunda razão.</p>
+        
+        <h3 id="structure">2. Estrutura do documento:</h3>
+        <p>Cada página é representada por um ficheiro .json, cuja estrutura é da forma:</p>
+        <img src="media/docs-ex1.png" class="img img-fluid" />
+        <p>O ficheiro começa sempre com uma array que irá conter os elementos.</p>
+        <p>Cada elemento é um objeto que terá vários valores que definem a forma como este irá ser apresentado na página.</p>
+        <p>Um elemento pode ter elementos por dentro, através da chave "insides", cujo valor será uma array de outros elementos.</p>
+
+        <h3 id="element">3. Elementos:</h3>
+        <p>Como explicado anteriormente, cada elemento tem várias propriedades, com muitas delas representando diretamente a uma propriedade html. Se não sabes html, não sei bem o que estás aqui a fazer, mas agradeço o esforço.</p>
+        <p>As propriedades que são utilizadas de um elemento são:</p>
+        <dl>
+            <dt>type:</dt>
+            <dd>
+                (string) A tag do elemento. (ex: um elemento de type="p" irá corresponder a um parágrafo no html) Qualquer tag html pode ser usada, desde que se saiba o que se está a fazer.
+            </dd>
+            <dt>text:</dt>
+            <dd>
+                (string) O texto que estará por dentro do elemento. (bem auto-explicativo)
+            </dd>
+            <dt>insides:</dt>
+            <dd>
+                (array) Um array de outros elementos que serão adicionados ao html após o texto, se este existir.
+            </dd>
+            <dt>id:</dt>
+            <dd>
+                (string) A propriedade "id" de um elemento em html.
+            </dd>
+            <dt>href:</dt>
+            <dd>
+                <p>(string) A propriedade "href" de um elemento &lt;a&gt;. Uma string que representa:</p>
+                <p>&emsp;Tipo 0 - Um link para outra página (dentro ou fora da wiki)</p>
+                <p>&emsp;Tipo 1 - Uma referência ao código de faina (estrutura: "página,zoom")</p>
+                <p>&emsp;Tipo 2 - Uma ligação a outra parte da mesma página.</p>
+            </dd>
+            <dt>href_type:</dt>
+            <dd>
+                (int) Os diferentes tipos do href, que foram explicados acima.
+            </dd>
+        </dl>
+        
+        <h3 id="addpage">4. Adicionar a página à lista:</h3>
+        <p>Então acabaste de fazer uma página e queres adicioná-la à wiki, para estar com as outras.</p>
+        <p>Isso é bem simples, basta salvar a página e colocar o ficheiro json na pasta "pages" do diretório do site, mas vais ver que não vais conseguir pesquisar pela tua página na barra de pesquisa.</p>
+        <p>Para teres a página a aparecer nas pesquisas é também bastante simples: só é preciso ir ao ficheiro "pages.json" e adicionar um par de chave e valor em que a chave será o nome da tua página(o nome do tópico que ela cobre, por exemplo) e em que o valor será o nome do ficheiro json da tua página(sem a extensão json).</p>
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <p>Achas que a documentação está fraca? Podes sempre editá-la se pensas que fazes melhor.</p>
+        <p>Precisas de mais ajuda? <a href="https://media.tenor.com/qLVNreKfO8AAAAAM/laughing-and.gif" target="_blank">Mais informações</a>.</p>
+    </div>
+</body>
+</html>

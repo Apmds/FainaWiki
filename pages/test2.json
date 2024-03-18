@@ -1,0 +1,28 @@
+[
+    {
+        "type": "h1",
+        "text": "Página de teste 2"
+    },
+    {
+        "type": "p",
+        "text": "Esta é outra página que serve para testar cenas básicas da \"engine\" desta wiki."
+    },
+    {
+        "type": "p",
+        "text": "Aqui não há muita coisa de especial, mas ",
+        "insides": [
+            {
+                "type": "a",
+                "text": "aqui sim!",
+                "href": "test",
+                "href_type": 0
+            }
+        ]
+    },
+    {
+        "type": "a",
+        "text": "Este link deve abrir o código de faina na página 3 com um zoom de 200 (tipo 1)",
+        "href": "3,200",
+        "href_type": 1
+    }
+]

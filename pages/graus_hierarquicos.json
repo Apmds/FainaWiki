@@ -1,0 +1,94 @@
+[
+    {
+        "type": "h1",
+        "text": "Graus Hierárquicos"
+    },
+    {
+        "type": "p",
+        "text": "Todos os elementos da faina académica possuem uma designação que os enquadra na ",
+        "insides": [
+            {
+                "type": "a",
+                "href": "20,100",
+                "href_type": 1,
+                "text": "Hierarquia da Faina Académica."
+            }
+        ]
+    },
+    {
+        "type": "h3",
+        "text": "Primeira matrícula:"
+    },
+    {
+        "type": "p",
+        "text": "Na primeira matrícula, existem os ",
+        "insides": [
+            {
+                "type": "a",
+                "href": "aluviao",
+                "href_type": 0,
+                "text": "Aluviões,"
+            },
+            {
+                "type": "span",
+                "text": " designados por Lodos e Lamas, mudando a designação para Moliço após passarem pela tribuna durante o "
+            },
+            {
+                "type": "a",
+                "href": "momentos_faina#desfile",
+                "href_type": 0,
+                "text": "Desfile da Semana do Enterro."
+            }
+        ]
+    },
+    {
+        "type": "p",
+        "text": "Existem também os Aluviões Insossos, que são Aluviões que também estão na primeira matrícula, mas que têm uma ou mais matrículas noutras academias."
+    },
+    {
+        "type": "h3",
+        "text": "Segunda matrícula:"
+    },
+    {
+        "type": "p",
+        "text": "Os ",
+        "insides": [
+            {
+                "type": "a",
+                "href": "junco",
+                "href_type": 0,
+                "text": "Juncos e Caniças"
+            },
+            {
+                "type": "span",
+                "text": " são os estudantes que criaram raízes na Academia e na Cidadade."
+            }
+        ]
+    },
+    {
+        "type": "h3",
+        "text": "Terceira Matrícula:"
+    },
+    {
+        "type": "p",
+        "text": "Na terceira matrícula, já ",
+        "insides": [
+            {
+                "type": "a",
+                "href": "moco",
+                "href_type": 0,
+                "text": "Moços e Moças"
+            },
+            {
+                "type": "span",
+                "text": ", estes estudantes são finalmente membros do Salgado Académico, e por isso têm os direitos de tal "
+            },
+            {
+                "type": "a",
+                "href": "15, 200",
+                "href_type": 1,
+                "text": "(Salina I, pg.15)."
+            }
+        ]
+    }
+]
